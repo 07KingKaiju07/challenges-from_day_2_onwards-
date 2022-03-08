@@ -5,8 +5,12 @@ actor {
     // Challenge 1 : Write a function nat_to_nat8 
     // that converts a Nat n to a Nat8. 
     public func nat_to_nat8(n : Nat ) : async Nat8 {
+        if(n > 255) {
+            return 0; // error code
+        };
         return(Nat8.fromNat(n));
     };
+
     // Challenge 2 : Write a function max_number_with_n_bits
     // that takes a Nat n and returns the maximum number 
     // that can be represented with only n-bits.
